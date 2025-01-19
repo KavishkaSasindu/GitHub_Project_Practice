@@ -1,0 +1,21 @@
+name: simply say Hello World
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  Hello_World:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        run: actions/checkout@v3
+        
+      - name: Echo Hello World
+        run: echo "Hello World"
+    
